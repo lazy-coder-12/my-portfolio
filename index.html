@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ============================================
+         META TAGS - Character encoding & Viewport
+         ============================================ -->
+    <!-- Ensure proper character encoding for all browsers -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration for responsive design - mobile-first approach -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Prevents form autofill inconsistencies across browsers -->
+    <meta name="color-scheme" content="light dark">
+
+    <!-- ============================================
+         SEO & SITE METADATA
+         ============================================ -->
+    <!-- Page title - appears in browser tab and search results (50-60 chars recommended) -->
+    <title>Anurag Verma - Full Stack Developer Portfolio</title>
+
+    <!-- Meta description - appears in search engine results (150-160 chars recommended) -->
+    <meta name="description"
+        content="Explore Anurag Verma's portfolio showcasing web development projects, technical skills, and professional experience in full stack development.">
+
+    <!-- Keywords for search engines (though less important in modern SEO) -->
+    <meta name="keywords" content="portfolio, web developer, full stack, projects, HTML, CSS, JavaScript">
+
+    <!-- Specifies the author of the page -->
+    <meta name="author" content="Anurag Verma">
+
+    <!-- Indicates the document is for general audiences -->
+    <meta name="rating" content="general">
+
+    <!-- ============================================
+         OPEN GRAPH TAGS - Social Media Sharing
+         ============================================ -->
+    <!-- Open Graph protocol tags help control how content appears when shared on social platforms -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta property="og:title" content="Anurag Verma - Full Stack Developer Portfolio">
+    <meta property="og:description"
+        content="Explore my portfolio showcasing web development projects and professional experience.">
+    <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+
+    <!-- ============================================
+         TWITTER CARD TAGS - Twitter Sharing
+         ============================================ -->
+    <!-- Twitter-specific metadata for better preview when shared -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anurag Verma - Full Stack Developer Portfolio">
+    <meta name="twitter:description"
+        content="Explore my portfolio showcasing web development projects and professional experience.">
+    <meta name="twitter:image" content="https://your-domain.com/twitter-image.jpg">
+
+    <!-- ============================================
+         FAVICON & THEME
+         ============================================ -->
+    <!-- Main favicon - displayed in browser tab -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+
+    <!-- Optional: Apple touch icon for iOS home screen -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <!-- Optional: Theme color for browser chrome on mobile devices -->
+    <!-- <meta name="theme-color" content="#000000"> -->
+
+    <!-- ============================================
+         STYLESHEETS
+         ============================================ -->
+    <!-- External CSS file - contains all styling for the page -->
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- ============================================
+         PRECONNECT & DNS-PREFETCH
+         ============================================ -->
+    <!-- Preconnect to external domains to improve performance -->
+    <!-- (Uncomment if using external services like Google Fonts, CDNs, etc.) -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="dns-prefetch" href="https://example-api.com"> -->
+
+</head>
+
+<body>
+    <!-- ============================================
+         SKIP LINK - Accessibility
+         ============================================ -->
+    <!-- Allows keyboard users to skip navigation and jump to main content -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
+    <header class="main-header" role="banner">
+        <!-- Navigation landmark - helps assistive technology users find navigation -->
+        <nav id="primary-navigation" role="navigation" aria-label="Primary Navigation">
+            <!-- Unordered list is semantically correct for navigation menus -->
+            <ul class="nav-list">
+                <!-- Each navigation item with appropriate ARIA attributes -->
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./pages/about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#featured-projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact-section" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <!-- Main landmark - indicates primary content of the page -->
+    <main id="main-content" class="main-content">
+
+        <!-- ========================================
+             HERO SECTION - Introduction
+             ======================================== -->
+        <section id="hero-section" class="hero-section" aria-labelledby="hero-heading">
+            <div class="content-container">
+                <div class="hero-content">
+                    <!-- Main heading - consider using h1 for page main title only -->
+                    <h1 id="hero-heading" class="hero-title">
+                        Hi, I'm <span class="highlight">Anurag Verma</span>
+                    </h1>
+
+                    <!-- Subheading - provides context about the developer -->
+                    <p class="hero-subtitle">
+                        Full Stack Developer passionate about creating beautiful, responsive, and user-friendly web
+                        experiences
+                    </p>
+
+                    <!-- Call-to-action button group -->
+                    <div class="hero-ctas">
+                        <a href="#featured-projects" class="btn btn-primary" aria-label="View my projects">
+                            View My Work
+                        </a>
+                        <a href="./pages/about.html" class="btn btn-secondary" aria-label="Learn more about me">
+                            Learn More About Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             FEATURED PROJECTS SECTION
+             ======================================== -->
+        <section id="featured-projects" class="featured-projects" aria-labelledby="projects-heading">
+            <div class="content-container">
+                <!-- Section heading -->
+                <h2 id="projects-heading" class="section-heading">Featured Projects</h2>
+
+                <!-- Descriptive text for the section -->
+                <p class="section-description">
+                    Explore some of my recent work and the technologies I've used to build them
+                </p>
+
+                <!-- Projects grid - uses semantic list for accessibility -->
+                <ul class="projects-grid" role="list">
+                    <!-- Project 1 -->
+                    <li class="project-card" role="listitem">
+                        <article class="project-article">
+                            <!-- Project image with descriptive alt text -->
+                            <img src="./images/project-1-thumbnail.jpg"
+                                alt="Project 1: Brief description of what the project does" class="project-image"
+                                loading="lazy">
+
+                            <!-- Project details -->
+                            <div class="project-info">
+                                <h3 class="project-title">Project One</h3>
+                                <p class="project-description">
+                                    A brief description of your first project and its key features
+                                </p>
+
+                                <!-- Technologies used - helps showcase skill set -->
+                                <div class="project-technologies">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+
+                                <!-- Project links -->
+                                <div class="project-links">
+                                    <a href="./pages/project-1.html" class="project-link"
+                                        aria-label="View Project One details">
+                                        View Details
+                                    </a>
+                                    <a href="#" class="project-link project-link-external"
+                                        aria-label="Visit Project One live site (external link)">
+                                        Live Demo ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Project 2 -->
+                    <li class="project-card" role="listitem">
+                        <article class="project-article">
+                            <img src="./images/project-2-thumbnail.jpg"
+                                alt="Project 2: Brief description of what the project does" class="project-image"
+                                loading="lazy">
+                            <div class="project-info">
+                                <h3 class="project-title">Project Two</h3>
+                                <p class="project-description">
+                                    A brief description of your second project and its key features
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="./pages/project-2.html" class="project-link"
+                                        aria-label="View Project Two details">
+                                        View Details
+                                    </a>
+                                    <a href="#" class="project-link project-link-external"
+                                        aria-label="Visit Project Two live site (external link)">
+                                        Live Demo ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <!-- Project 3 -->
+                    <li class="project-card" role="listitem">
+                        <article class="project-article">
+                            <img src="./images/project-3-thumbnail.jpg"
+                                alt="Project 3: Brief description of what the project does" class="project-image"
+                                loading="lazy">
+                            <div class="project-info">
+                                <h3 class="project-title">Project Three</h3>
+                                <p class="project-description">
+                                    A brief description of your third project and its key features
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="./pages/project-3.html" class="project-link"
+                                        aria-label="View Project Three details">
+                                        View Details
+                                    </a>
+                                    <a href="#" class="project-link project-link-external"
+                                        aria-label="Visit Project Three live site (external link)">
+                                        Live Demo ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <!-- Link to full projects page -->
+                <div class="see-all-projects">
+                    <a href="#" class="btn btn-outline" aria-label="View all projects">
+                        See All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CALL-TO-ACTION SECTION
+             ======================================== -->
+        <section id="contact-section" class="cta-section" aria-labelledby="cta-heading">
+            <div class="content-container">
+                <h2 id="cta-heading" class="cta-heading">Let's Work Together</h2>
+                <p class="cta-description">
+                    I'm always interested in hearing about new projects and opportunities.
+                </p>
+                <a href="mailto:your.email@example.com" class="btn btn-primary btn-large"
+                    aria-label="Send me an email at your.email@example.com">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <!-- Footer landmark - contains supplementary information -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <!-- Copyright information -->
+            <p class="footer-copyright">
+                &copy; <span id="year">2026</span> Anurag Verma. All rights reserved.
+            </p>
+
+            <!-- Social media links - optional section -->
+            <nav class="footer-social" aria-label="Social Media Links">
+                <ul class="social-links" role="list">
+                    <li role="listitem">
+                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit my GitHub profile">
+                            GitHub
+                        </a>
+                    </li>
+                    <li role="listitem">
+                        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit my LinkedIn profile">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li role="listitem">
+                        <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit my Twitter profile">
+                            Twitter
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         OPTIONAL: INLINE SCRIPT
+         ============================================ -->
+    <!-- Simple script to auto-update copyright year - optional enhancement -->
+    <script>
+        // Update copyright year dynamically if needed
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- ============================================
+         EXTERNAL JAVASCRIPT
+         ============================================ -->
+    <!-- Main JavaScript file for interactive functionality -->
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
